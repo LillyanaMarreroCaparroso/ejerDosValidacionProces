@@ -15,7 +15,7 @@ public class Comensal implements Runnable {
     public void run() {
         while (MAGDALENAS > 0) { //tiene acceso
             try {
-                semaforo.acquire(); //el conteo interno del semáforo se reduce en 1
+                semaforo.acquire(); //el semáforo esta a 0
                 if (MAGDALENAS > 0) {
                     MAGDALENAS--;
                     System.out.println(nombre + " ha cogido una magdalena de la mesa. Quedan " + MAGDALENAS + " magdalenas");
